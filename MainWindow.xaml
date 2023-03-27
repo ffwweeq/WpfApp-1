@@ -19,7 +19,7 @@
         <Label Content="英尺" HorizontalAlignment="Left" Margin="336,225,0,0" VerticalAlignment="Top" Width="96" Height="27"/>
         <TextBox x:Name="txtFt" HorizontalAlignment="Center" Margin="0,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="25" KeyUp="txtFt_KeyUp"/>
         <Label Content="英碼" HorizontalAlignment="Left" Margin="564,225,0,0" VerticalAlignment="Top" Width="97" Height="27"/>
-        <TextBox x:Name="txtYard" HorizontalAlignment="Left" Margin="564,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="25"/>
+        <TextBox x:Name="txtYard" HorizontalAlignment="Left" Margin="564,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="25" KeyUp="txtYard_KeyUp"/>
         <Label Content="說明文字" HorizontalAlignment="Left" Margin="94,321,0,0" VerticalAlignment="Top" Width="97" Height="27"/>
         <TextBox x:Name="txtInfo" HorizontalAlignment="Left" Margin="94,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="601" Height="25"/>
         <TextBox x:Name="txtCM" HorizontalAlignment="Left" Margin="94,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="25" KeyUp="txtCM_KeyUp"/>
