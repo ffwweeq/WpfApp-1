@@ -109,15 +109,21 @@ namespace WpfApp1
 
         private void txtFt_KeyUp(object sender, KeyEventArgs e)
         {
-            double douFt;
+            strInput = txtFt.Text;
 
-            douFt = Convert.ToDouble(txtFt.Text);
-
-            txtCM.Text = string.Format("{0:0.##########}", douFt * 30.48);
-            txtM.Text = string.Format("{0:0.##########}", douFt * 0.3048);
-            txtKM.Text = string.Format("{0:0.##########}", douFt * 0.0003048);
-            txtIn.Text = string.Format("{0:0.##########}", douFt * 12);
-            txtYard.Text = string.Format("{0:0.##########}", douFt * 0.3333);
+            if (double.TryParse(strInput, out douOutput) == true)
+            {
+                txtCM.Text = string.Format("{0:0.##########}", douOutput * 30.48);
+                txtM.Text = string.Format("{0:0.##########}", douOutput * 0.3048);
+                txtKM.Text = string.Format("{0:0.##########}", douOutput * 0.0003048);
+                txtIn.Text = string.Format("{0:0.##########}", douOutput * 12);
+                txtYard.Text = string.Format("{0:0.##########}", douOutput * 0.3333);
+            }
+            else
+            {
+                txtInfo.Text = "請輸入數字";
+                txtFt.Text = "";
+            }
         }
 
         private void txtYard_KeyUp(object sender, KeyEventArgs e)
