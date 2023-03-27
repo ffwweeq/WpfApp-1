@@ -24,18 +24,26 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+        string strInput;
+        double douOutput;
 
         private void txtCM_KeyUp(object sender, KeyEventArgs e)
         {
-            double douCM;
+            strInput = txtCM.Text;
 
-            douCM = Convert.ToDouble(txtCM.Text);
-
-            txtM.Text = string.Format("{0:0.##########}", douCM / 100);
-            txtKM.Text = string.Format("{0:0.##########}", douCM / 100000);
-            txtIn.Text = string.Format("{0:0.##########}", douCM / 2.54);
-            txtFt.Text = string.Format("{0:0.##########}", douCM / 30.48);
-            txtYard.Text = string.Format("{0:0.##########}", douCM / 91.44);
+            if (double.TryParse(strInput, out douOutput) == true)
+            {
+                txtM.Text = string.Format("{0:0.##########}", douOutput / 100);
+                txtKM.Text = string.Format("{0:0.##########}", douOutput / 100000);
+                txtIn.Text = string.Format("{0:0.##########}", douOutput / 2.54);
+                txtFt.Text = string.Format("{0:0.##########}", douOutput / 30.48);
+                txtYard.Text = string.Format("{0:0.##########}", douOutput / 91.44);
+            }
+            else
+            {
+                txtInfo.Text = "請輸入數字";
+                txtCM.Text = "";
+            }
         }
 
         private void txtM_KeyUp(object sender, KeyEventArgs e)
