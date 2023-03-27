@@ -20,6 +20,8 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        string strInput; 
+        double douOutput;
         public MainWindow()
         {
             InitializeComponent();
@@ -46,11 +48,7 @@ namespace WpfApp1
 
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                txtM.Text = string.Format("{0:0.##########}", douOutput / 100);
-                txtKM.Text = string.Format("{0:0.##########}", douOutput / 100000);
-                txtIn.Text = string.Format("{0:0.##########}", douOutput / 2.54);
-                txtFt.Text = string.Format("{0:0.##########}", douOutput / 30.48);
-                txtYard.Text = string.Format("{0:0.##########}", douOutput / 91.44);
+                caculateAnswer(0, douOutput);
             }
             else
             {
