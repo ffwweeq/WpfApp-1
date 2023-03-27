@@ -63,12 +63,7 @@ namespace WpfApp1
 
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                txtCM.Text = string.Format("{0:0.##########}", douOutput * 100);
-                txtKM.Text = string.Format("{0:0.##########}", douOutput * 0.001);
-                txtIn.Text = string.Format("{0:0.##########}", douOutput * 39.37);
-                txtFt.Text = string.Format("{0:0.##########}", douOutput * 3.28);
-                txtYard.Text = string.Format("{0:0.##########}", douOutput * 1.09);
-
+                caculateAnswer(1, douOutput * 100); // 事先將公尺轉換成公分
             }
             else
             {
