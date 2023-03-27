@@ -93,12 +93,7 @@ namespace WpfApp1
 
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                txtCM.Text = string.Format("{0:0.##########}", douOutput * 2.54);
-                txtM.Text = string.Format("{0:0.##########}", douOutput * 0.0254);
-                txtKM.Text = string.Format("{0:0.##########}", douOutput * 0.0000254);
-                txtFt.Text = string.Format("{0:0.##########}", douOutput * 0.0833);
-                txtYard.Text = string.Format("{0:0.##########}", douOutput * 0.0278);
-
+                caculateAnswer(3, douOutput * 2.54);
             }
             else
             {
@@ -113,11 +108,7 @@ namespace WpfApp1
 
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                txtCM.Text = string.Format("{0:0.##########}", douOutput * 30.48);
-                txtM.Text = string.Format("{0:0.##########}", douOutput * 0.3048);
-                txtKM.Text = string.Format("{0:0.##########}", douOutput * 0.0003048);
-                txtIn.Text = string.Format("{0:0.##########}", douOutput * 12);
-                txtYard.Text = string.Format("{0:0.##########}", douOutput * 0.3333);
+                caculateAnswer(4, douOutput * 30.48);
             }
             else
             {
