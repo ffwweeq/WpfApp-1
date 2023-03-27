@@ -48,15 +48,22 @@ namespace WpfApp1
 
         private void txtM_KeyUp(object sender, KeyEventArgs e)
         {
-            double douM;
+            strInput = txtM.Text;
 
-            douM = Convert.ToDouble(txtM.Text);
+            if (double.TryParse(strInput, out douOutput) == true)
+            {
+                txtCM.Text = string.Format("{0:0.##########}", douOutput * 100);
+                txtKM.Text = string.Format("{0:0.##########}", douOutput * 0.001);
+                txtIn.Text = string.Format("{0:0.##########}", douOutput * 39.37);
+                txtFt.Text = string.Format("{0:0.##########}", douOutput * 3.28);
+                txtYard.Text = string.Format("{0:0.##########}", douOutput * 1.09);
 
-            txtCM.Text = string.Format("{0:0.##########}", douM * 100);
-            txtKM.Text = string.Format("{0:0.##########}", douM * 0.001);
-            txtIn.Text = string.Format("{0:0.##########}", douM * 39.37);
-            txtFt.Text = string.Format("{0:0.##########}", douM * 3.28);
-            txtYard.Text = string.Format("{0:0.##########}", douM * 1.09);
+            }
+            else
+            {
+                txtInfo.Text = "請輸入數字";
+                txtM.Text = "";
+            }
         }
 
         private void txtKM_KeyUp(object sender, KeyEventArgs e)
