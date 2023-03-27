@@ -153,6 +153,7 @@ namespace WpfApp1
             txtIn.Text = "";
             txtFt.Text = "";
             txtYard.Text = "";
+            txtInfo.Text = "請輸入數字";
         }
     }
 }
