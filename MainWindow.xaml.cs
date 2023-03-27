@@ -37,5 +37,18 @@ namespace WpfApp1
             txtFt.Text = string.Format("{0:0.##########}", douCM / 30.48);
             txtYard.Text = string.Format("{0:0.##########}", douCM / 91.44);
         }
+
+        private void txtM_KeyUp(object sender, KeyEventArgs e)
+        {
+            double douM;
+
+            douM = Convert.ToDouble(txtM.Text);
+
+            txtCM.Text = string.Format("{0:0.##########}", douM * 100);
+            txtKM.Text = string.Format("{0:0.##########}", douM * 0.001);
+            txtIn.Text = string.Format("{0:0.##########}", douM * 39.37);
+            txtFt.Text = string.Format("{0:0.##########}", douM * 3.28);
+            txtYard.Text = string.Format("{0:0.##########}", douM * 1.09);
+        }
     }
 }
