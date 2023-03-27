@@ -15,7 +15,7 @@
         <Label Content="公里" HorizontalAlignment="Left" Margin="564,118,0,0" VerticalAlignment="Top" Width="97" Height="27"/>
         <TextBox x:Name="txtKM" HorizontalAlignment="Left" Margin="564,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="25" KeyUp="txtKM_KeyUp"/>
         <Label Content="英吋" HorizontalAlignment="Left" Margin="94,225,0,0" VerticalAlignment="Top" Width="97" Height="27"/>
-        <TextBox x:Name="txtIn" HorizontalAlignment="Left" Margin="94,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="25"/>
+        <TextBox x:Name="txtIn" HorizontalAlignment="Left" Margin="94,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="25" KeyUp="txtIn_KeyUp"/>
         <Label Content="英尺" HorizontalAlignment="Left" Margin="336,225,0,0" VerticalAlignment="Top" Width="96" Height="27"/>
         <TextBox x:Name="txtFt" HorizontalAlignment="Center" Margin="0,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="25"/>
         <Label Content="英碼" HorizontalAlignment="Left" Margin="564,225,0,0" VerticalAlignment="Top" Width="97" Height="27"/>
