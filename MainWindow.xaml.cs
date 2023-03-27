@@ -123,11 +123,7 @@ namespace WpfApp1
 
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                txtCM.Text = string.Format("{0:0.##########}", douOutput * 91.44);
-                txtM.Text = string.Format("{0:0.##########}", douOutput * 0.9144);
-                txtKM.Text = string.Format("{0:0.##########}", douOutput * 0.0009144);
-                txtIn.Text = string.Format("{0:0.##########}", douOutput * 36);
-                txtFt.Text = string.Format("{0:0.##########}", douOutput * 3);
+                caculateAnswer(5, douOutput * 91.44);
             }
             else
             {
