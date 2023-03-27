@@ -128,15 +128,21 @@ namespace WpfApp1
 
         private void txtYard_KeyUp(object sender, KeyEventArgs e)
         {
-            double douYard;
+            strInput = txtYard.Text;
 
-            douYard = Convert.ToDouble(txtYard.Text);
-
-            txtCM.Text = string.Format("{0:0.##########}", douYard * 91.44);
-            txtM.Text = string.Format("{0:0.##########}", douYard * 0.9144);
-            txtKM.Text = string.Format("{0:0.##########}", douYard * 0.0009144);
-            txtIn.Text = string.Format("{0:0.##########}", douYard * 36);
-            txtFt.Text = string.Format("{0:0.##########}", douYard * 3);
+            if (double.TryParse(strInput, out douOutput) == true)
+            {
+                txtCM.Text = string.Format("{0:0.##########}", douOutput * 91.44);
+                txtM.Text = string.Format("{0:0.##########}", douOutput * 0.9144);
+                txtKM.Text = string.Format("{0:0.##########}", douOutput * 0.0009144);
+                txtIn.Text = string.Format("{0:0.##########}", douOutput * 36);
+                txtFt.Text = string.Format("{0:0.##########}", douOutput * 3);
+            }
+            else
+            {
+                txtInfo.Text = "請輸入數字";
+                txtYard.Text = "";
+            }
         }
 
         private void btnAllClear_Click(object sender, RoutedEventArgs e)
